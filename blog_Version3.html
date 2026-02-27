@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Lalita Attires</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #8b1538 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #8b1538;
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(135deg, #8b1538 0%, #d4af37 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 2rem 60px;
+            margin-top: 60px;
+        }
+
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #8b1538 0%, #d4af37 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+
+        .blog-title {
+            color: #8b1538;
+            margin: 0.5rem 0;
+            font-size: 1.3rem;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #8b1538;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #d4af37;
+        }
+
+        /* Footer */
+        footer {
+            background: #2a2a2a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="window.location.href='index.html'">LALITA ATTIRES</div>
+        <nav>
+            <a onclick="window.location.href='index.html'">Home</a>
+            <a onclick="window.location.href='shop.html'">Shop</a>
+            <a onclick="window.location.href='blog.html'">Blog</a>
+            <a onclick="window.location.href='sizeguide.html'">Size Guide</a>
+            <a onclick="window.location.href='contact.html'">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1>Lalita's Blog</h1>
+        <p>Fashion Tips, Styling Guides & Cultural Stories</p>
+    </section>
+
+    <!-- Blog Posts -->
+    <div class="blog-container">
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">👗</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 March 15, 2026</p>
+                    <h3 class="blog-title">How to Style a Saree Like a Pro</h3>
+                    <p class="blog-excerpt">Learn the art of draping a saree with confidence. From traditional to modern styles, discover tips to make your saree look flawless for any occasion...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🧵</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 March 10, 2026</p>
+                    <h3 class="blog-title">Fabric Care Guide: Keep Your Attire Fresh</h3>
+                    <p class="blog-excerpt">Proper care ensures your traditional wear lasts longer. Discover washing tips, storage methods, and maintenance techniques for different fabrics...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">💎</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 March 5, 2026</p>
+                    <h3 class="blog-title">Jewelry Pairing with Traditional Wear</h3>
+                    <p class="blog-excerpt">Master the art of accessorizing! Learn which jewelry styles complement different outfits and how to create a cohesive, elegant look...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🎉</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 February 28, 2026</p>
+                    <h3 class="blog-title">What to Wear to Indian Festivals</h3>
+                    <p class="blog-excerpt">Festival season guide! Find out what to wear to Diwali, Holi, Navratri, and other celebrations with outfit recommendations...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">👰</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 February 20, 2026</p>
+                    <h3 class="blog-title">Wedding Wear Trends 2026</h3>
+                    <p class="blog-excerpt">Stay updated with the latest bridal trends! From color palettes to embroidery styles, explore what's hot in Indian wedding fashion...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🌍</div>
+                <div class="blog-content">
+                    <p class="blog-date">📅 February 15, 2026</p>
+                    <h3 class="blog-title">The Story Behind Traditional Indian Textiles</h3>
+                    <p class="blog-excerpt">Dive deep into the rich history of Indian fabrics. Learn about the artisans, techniques, and cultural significance behind each textile...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Lalita Attires. All rights reserved. | Wear Confidence. Wear Tradition.</p>
+    </footer>
+</body>
+</html>
